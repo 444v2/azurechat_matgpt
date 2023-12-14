@@ -5,7 +5,7 @@ interface Props {
 }
 
 export const useChatInputDynamicHeight = (props: Props) => {
-  const maxRows = 6;
+  const maxRows = 15;
   const [rows, setRows] = useState(1);
 
   const [keysPressed, setKeysPressed] = useState(new Set());
@@ -22,7 +22,7 @@ export const useChatInputDynamicHeight = (props: Props) => {
   };
 
   const resetRows = () => {
-    setRows(1);
+    setRows(15);
   };
 
   const onChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
