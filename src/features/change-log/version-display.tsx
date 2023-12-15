@@ -13,7 +13,7 @@ export const VersionDisplay = async () => {
             new version available {appVersion.version}
           </span>
         ) : (
-          <span className="font-normal bg-green-500 rounded-2xl p-1 px-3">
+          <span className="font-normal bg-primary rounded-2xl p-1 px-3">
             You are up to date
           </span>
         )}
