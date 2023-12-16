@@ -14,7 +14,6 @@ export default function Home() {
     useEffect(() => {
         if (isClient) {
             signIn("azure-ad");
-            redirect("/chat");
         }
     }, [isClient]);
 
