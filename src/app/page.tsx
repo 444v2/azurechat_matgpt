@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react';
+use client; // This directive marks the component as a Client Component
+
+import { useEffect } from 'react';
 import { signIn } from 'next-auth/react';
 import { Card } from "@/components/ui/card";
 
 export default function Home() {
-    const [isClient, setIsClient] = useState(false);
-
     useEffect(() => {
-        setIsClient(typeof window !== 'undefined');
+        signIn("azure-ad");
     }, []);
-
-    useEffect(() => {
-        if (isClient) {
-            signIn("azure-ad");
-        }
-    }, [isClient]);
 
     return (
         <Card className="h-full flex-1 overflow-hidden relative items-center justify-center flex">
@@ -21,7 +15,6 @@ export default function Home() {
         </Card>
     );
 }
-
 
 
 //import { LogIn } from "@/components/login/login";
