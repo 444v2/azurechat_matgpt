@@ -38,15 +38,15 @@ export const MainMenu = () => {
             <img src="/ai-icon.png" />
           </Link>
         </Button>
-        <Button
-          asChild
-          className="rounded-full w-[40px] h-[40px] p-2 text-primary"
-          variant={"outline"}
-        >
-          <Link href="/" title="Chat">
-            <MessageCircle />
-          </Link>
-        </Button>
+        {/*<Button*/}
+        {/*  asChild*/}
+        {/*  className="rounded-full w-[40px] h-[40px] p-2 text-primary"*/}
+        {/*  variant={"outline"}*/}
+        {/*>*/}
+        {/*  <Link href="/" title="Chat">*/}
+        {/*    <MessageCircle />*/}
+        {/*  </Link>*/}
+        {/*</Button>*/}
         {session?.user?.isAdmin ? (
           <Button
             asChild
@@ -60,16 +60,16 @@ export const MainMenu = () => {
         ) : (
           <></>
         )}
-        <Button
-          asChild
-          className="rounded-full w-[40px] h-[40px] p-2 text-primary"
-          variant={"outline"}
-        >
-          <Link href="/change-log" title="change log" className="relative">
-            <Triangle />
-            <UpdateIndicator />
-          </Link>
-        </Button>
+      {/*  <Button*/}
+      {/*    asChild*/}
+      {/*    className="rounded-full w-[40px] h-[40px] p-2 text-primary"*/}
+      {/*    variant={"outline"}*/}
+      {/*  >*/}
+      {/*    <Link href="/change-log" title="change log" className="relative">*/}
+      {/*      <Triangle />*/}
+      {/*      <UpdateIndicator />*/}
+      {/*    </Link>*/}
+      {/*  </Button>*/}
       </div>
       <div className="flex flex-col gap-2 items-center">
         <ThemeToggle />
