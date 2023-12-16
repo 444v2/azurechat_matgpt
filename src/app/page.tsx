@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { Card } from "@/components/ui/card";
+import { redirect } from "next/navigation";
 
 export default function Home() {
     const [isClient, setIsClient] = useState(false);
@@ -13,6 +14,7 @@ export default function Home() {
     useEffect(() => {
         if (isClient) {
             signIn("azure-ad");
+            redirect("/chat");
         }
     }, [isClient]);
 
