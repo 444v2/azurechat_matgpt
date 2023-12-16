@@ -1,3 +1,5 @@
+use client; 
+
 import { LogIn } from "@/components/login/login";
 import { useEffect } from 'react';
 import { Card } from "@/components/ui/card";
