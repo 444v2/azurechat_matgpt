@@ -48,7 +48,17 @@ export class CosmosDBChatMessageHistory {
     };
 
     await UpsertChat(modelToSave);
-  }
+    }
+
+    async deleteChatHistory(): Promise<void> {
+        const chats = await FindAllChats(this.sessionId);
+        for (const chat of chats) {
+            if (!chat.isDeleted) {
+                chat.isDeleted = true;
+                await UpsertChat(chat);
+            }
+        }
+    }
 }
 
 function mapOpenAIChatMessages(

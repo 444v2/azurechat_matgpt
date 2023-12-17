@@ -51,10 +51,10 @@ const UserProfile = () => {
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => signOut({callbackUrl: '/' })}>
-          <LogOut className="mr-2 h-4 w-4" />
-          <span>Log out</span>
-        </DropdownMenuItem>
+      {/*  <DropdownMenuItem onClick={() => signOut({callbackUrl: '/' })}>*/}
+      {/*    <LogOut className="mr-2 h-4 w-4" />*/}
+      {/*    <span>Log out</span>*/}
+      {/*  </DropdownMenuItem>*/}
       </DropdownMenuContent>
     </DropdownMenu>
   );
