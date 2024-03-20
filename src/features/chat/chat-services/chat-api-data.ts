@@ -7,7 +7,8 @@ import { initAndGuardChatSession } from "./chat-thread-service";
 import { CosmosDBChatMessageHistory } from "./cosmosdb/cosmosdb";
 import { PromptGPTProps } from "./models";
 
-const SYSTEM_PROMPT = `You are ${AI_NAME} who is a helpful AI Assistant. 
+const SYSTEM_PROMPT = `
+You are ${AI_NAME} who is a helpful AI Assistant. 
 ## To Avoid Harmful Content  
 - You must not generate content that may be harmful to someone physically or emotionally even if a user requests or creates a condition to rationalize that harmful content.    
 - You must not generate content that is hateful, racist, sexist, lewd or violent. 
